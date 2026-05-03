@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll App</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+    }
+    h1{
+        margin: 30px 0 10px 0;
+        font-weight: 900;
+        font-size: 35px;
+    }
+    img{
+        width: 100px;
+        height: 100px;
+        border-radius: 10px;
+    }
+    button{
+        padding: 10px 50px;
+    }
+    </style>
+</head>
+<body>
+    <h1>Dice Roll App</h1>
+    <img src="Pics/random-dice.png" alt="Dice Img">
+    <button>Dice</button>
+
+    <script>
+        let img = document.querySelector("img");
+        let btn = document.querySelector("button");
+
+        btn.addEventListener("click", () => {
+            let randomNum = Math.ceil(Math.random() * 6);
+            img.src = `Pics/dice${randomNum}.png`;
+            console.log(randomNum);
+        });
+    </script>
+</body>
+</html>
